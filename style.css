@@ -1,0 +1,84 @@
+body {
+    background-color: whitesmoke;
+    margin: 5vw;
+}
+h1 {
+    color: black;
+    font-size: 1vw;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    margin-left: 8vw;
+    text-transform: uppercase;
+}
+h2 {
+    color: blue; 
+    font-size: 1vw;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: right;
+    padding-bottom: 3vw;
+}
+
+p, ol {
+    color: black;
+    font-size: 1vw;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 2.5rem;
+    text-align: justify;
+    letter-spacing: normal;
+    word-spacing: normal;
+    margin: 5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+#animated-text {
+    font-size: 1vw;
+    display: block;
+    white-space: normal;
+    text-align: justify;
+}
+
+#animated-text span {
+    display: inline-block;
+    position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 2.5vw;
+    }
+    p, ol, #animated-text{
+        font-size: 2.5vw; 
+    }
+  }
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(calc(var(--x) * 0.3), calc(var(--y) * 0.3));
+    }
+    50% {
+        transform: translate(calc(var(--x) * 0.6), calc(var(--y) * 0.6));
+    }
+    75% {
+        transform: translate(calc(var(--x) * 0.9), calc(var(--y) * 0.9));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+
+
+
